@@ -95,6 +95,7 @@
   z-index: 0; /* Ensure image stays below text and button */
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;

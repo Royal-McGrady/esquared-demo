@@ -1,38 +1,109 @@
-.App {
+/* App.css */
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Or any other font you prefer */
+  color: #333;
+}
+
+/* Background and Main Layout */
+.bg-gray-100 {
+  background-color: #f7f7f7;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+/* Utility Classes */
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-white {
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-gray-400 {
+  color: #d1d5db;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.hover\:text-gray-400:hover {
+  color: #d1d5db;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.items-center {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.justify-between {
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hidden {
+  display: none;
+}
+
+.md\:flex {
+  display: flex;
+}
+
+.md\:hidden {
+  display: none;
+}
+
+/* Buttons */
+.btn-signup,
+.btn-signin {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #0046c8, #1e46dc);
+  color: #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-signup:hover,
+.btn-signin:hover {
+  background-color: #0059ff;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+      display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mobile-auth-buttons .btn-signup,
+  .mobile-auth-buttons .btn-signin {
+      padding: 0.75rem 1.5rem;
+      background-color: #0046c8;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      text-align: center;
+  }
+
+  .btn-signup-mobile:hover,
+  .btn-signin-mobile:hover {
+      background-color: #1e90ff;
   }
 }
+
+  

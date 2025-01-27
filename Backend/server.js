@@ -6,11 +6,11 @@ const port = 3001; // You can choose a different port
 
 // PostgreSQL connection configuration
 const pool = new Pool({
-  user: 'your_username', // Replace with your PostgreSQL username
-  host: 'localhost', // Replace with your PostgreSQL host
-  database: 'your_database_name', // Replace with your database name
-  password: 'your_password', // Replace with your PostgreSQL password
-  port: 5432, // Default PostgreSQL port
+  user: 'your_username', // SQL username
+  host: 'localhost', // SQL host
+  database: 'your_database_name', // Database name
+  password: 'your_password', // SQL password
+  port: 5432, // SQL port
 });
 
 // Middleware to parse JSON request bodies
