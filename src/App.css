@@ -7,6 +7,8 @@ body, html {
   box-sizing: border-box;
   font-family: 'Arial', sans-serif; /* Or any other font you prefer */
   color: #333;
+  padding-top: calc(90px); /* Adjusted for navbar height + extra spacing */
+  background-color: #f7f7f7;
 }
 
 /* Background and Main Layout */
@@ -15,11 +17,31 @@ body, html {
 }
 
 .min-h-screen {
-  min-height: 100vh;
+  min-height: calc(100vh - calc(90px + 50px)); /* Ensure full height without overlapping */
 }
 
 .main-content {
-  padding: 2rem;
+  width: 80%; /* Set consistent width for all components */
+  margin: 0 auto; /* Center align content */
+  padding: 2rem 1rem;
+  margin-top: 1rem; /* Ensure spacing below the navbar */
+}
+
+/* Navbar */
+.navbar {
+  width: 80%; /* Set consistent width */
+  margin: 0 auto; /* Center align the navbar */
+  padding: 1rem 0; /* Add padding to move it down a bit */
+  background: #0046c8; /* Adjust as necessary */
+  border-radius: 8px; /* Rounded corners for a cleaner look */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Utility Classes */
@@ -87,23 +109,24 @@ body, html {
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
   .menu-toggle {
-      display: block;
+    display: block;
   }
 
   .mobile-auth-buttons .btn-signup,
   .mobile-auth-buttons .btn-signin {
-      padding: 0.75rem 1.5rem;
-      background-color: #0046c8;
-      color: white;
-      font-size: 1.1rem;
-      border-radius: 5px;
-      text-align: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #0046c8;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-align: center;
   }
 
   .btn-signup-mobile:hover,
   .btn-signin-mobile:hover {
-      background-color: #1e90ff;
+    background-color: #1e90ff;
   }
 }
+
 
   

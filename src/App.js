@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import Form from './components/Forms.jsx';
 import Dashboard from './pages/Dashboard.js';
 import FoundersDashboard from './pages/FoundersDashboard';
+import DealsPage from './pages/DealsPage';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Import Routes and Route
 
@@ -22,6 +23,9 @@ function App() {
           <Route path="/form" element={<Form />} />  {/* Forms for the /forms route */}
           <Route path="/dashboard" element={<Dashboard />} />  {/* Forms for the /forms route */}
           <Route path="/Founder/Dashboard" element={<FoundersDashboard />} />  {/* Forms for the /forms route */}
+          <Route path="/Deals" element={<DealsPage />} />  {/* Forms for the /forms route */}
+
+
         </Routes>
         {/* Rest of your application content */}
       </div>

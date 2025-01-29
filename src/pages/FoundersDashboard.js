@@ -1,6 +1,7 @@
 // src/pages/FoundersDashboard.js
 import React from 'react';
-import { Grid, Box } from '@mui/material';
+import { Box } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import FounderProfile from '../components/FounderProfile';
 import InvestorUpdates from '../components/InvestorUpdates';
 import NonMonetarySupport from '../components/NonMonetarySupport';
@@ -8,11 +9,31 @@ import AIAdvisor from '../components/AIAdvisor';
 import Milestones from '../components/Milestones';
 import ComplianceReports from '../components/ComplianceReports';
 import Calendar from '../components/Calendar';
+import FundingStatusCard from '../pages/UI/Founder Dashboard/FundingStatusCard';
+import RunwayCard from '../pages/UI/Founder Dashboard/RunwayCard';
+import UserGrowthCard from '../pages/UI/Founder Dashboard/UserGrowthCard';
+import RevenueCard from '../pages/UI/Founder Dashboard/RevenueCard';
+import LineChart from '../pages/UI/Founder Dashboard/LineChart';
 
 const FoundersDashboard = () => {
   return (
     <Box sx={{ flexGrow: 1, padding: 3 }}>
       <Grid container spacing={3}>
+        <Grid item xs={12} md={3}>
+          <FundingStatusCard />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <RunwayCard />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <UserGrowthCard />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <RevenueCard />
+        </Grid>
+        <Grid item xs={12}>
+          <LineChart />
+        </Grid>
         <Grid item xs={12} md={6}>
           <FounderProfile />
         </Grid>
